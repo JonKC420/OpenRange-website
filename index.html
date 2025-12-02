@@ -79,15 +79,19 @@
       gap: 10px;
     }
 
-      .brand-logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 14px;  /* a bit more “badge” than “dot” */
-      box-shadow: 0 0 0 1px rgba(248,250,252,0.18),
-                  0 18px 45px rgba(248,113,113,0.55);
-      object-fit: cover;
+    .brand-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fed7aa 0, #f97316 32%, #7f1d1d 100%);
+      box-shadow: 0 0 0 1px rgba(248,250,252,0.08), 0 12px 40px rgba(248,113,113,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0b1120;
     }
-
 
     .brand-text {
       display: flex;
@@ -198,7 +202,7 @@
     /* HERO */
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      grid-template-columns: minmax(0, 1fr); /* single column */
       gap: 32px;
       align-items: center;
     }
@@ -300,79 +304,6 @@
       font-size: 11px;
       color: var(--muted);
       margin-top: 4px;
-    }
-
-    .hero-visual {
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(148,163,184,0.55);
-      background:
-        radial-gradient(circle at top, rgba(249,115,22,0.16), transparent 60%),
-        radial-gradient(circle at 10% 80%, rgba(59,130,246,0.18), transparent 55%),
-        #020617;
-      padding: 14px;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-tagline {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .hero-image {
-      border-radius: 20px;
-      border: 1px solid rgba(148,163,184,0.5);
-      overflow: hidden;
-      height: 210px;
-      background-size: cover;
-      background-position: center;
-      background-image: url("https://images.pexels.com/photos/6476581/pexels-photo-6476581.jpeg?auto=compress&cs=tinysrgb&w=1200");
-      position: relative;
-    }
-
-    .hero-image-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(15,23,42,0.9), transparent 55%);
-    }
-
-    .hero-image-caption {
-      position: absolute;
-      left: 14px;
-      bottom: 12px;
-      font-size: 12px;
-      color: #e5e7eb;
-    }
-
-    .hero-pill {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.6);
-      font-size: 11px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-pill span.dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--accent-strong);
-    }
-
-    .hero-footnote {
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 10px;
     }
 
     /* ABOUT */
@@ -687,10 +618,6 @@
         margin-top: 14px;
       }
 
-      .hero-visual {
-        order: -1;
-      }
-
       nav ul {
         display: none;
       }
@@ -721,18 +648,13 @@
     <!-- NAV -->
     <header>
       <div class="nav-inner">
-       <div class="brand">
-  <img
-    src="MAXOPENRANGEPHOTO.png"
-    alt="Open Range OPR Shepherd Emblem"
-    class="brand-logo"
-  />
-  <div class="brand-text">
-    <span class="brand-name">Open Range</span>
-    <span class="brand-tag">Proof-of-Work for the Open Frontier</span>
-  </div>
-</div>
-
+        <div class="brand">
+          <div class="brand-logo">O</div>
+          <div class="brand-text">
+            <span class="brand-name">Open Range</span>
+            <span class="brand-tag">Proof-of-Work for the Open Frontier</span>
+          </div>
+        </div>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -758,63 +680,45 @@
           <div>
             <div class="section-label">
               <span class="section-label-dot"></span>
-              <span>Layer-1 • Proof-of-Work • GPU/CPU Friendly</span>
+              <span>Layer-1 • Proof-of-Work • CPU Dominate and GPU Friendly</span>
             </div>
             <h1 class="hero-title">
-              A Fair <span class="accent">Proof-of-Work</span> Chain
-              Built For Miners, Traders & The Open Frontier.
+              A fair <span class="accent">Proof-of-Work</span> chain
+              built for miners, traders &amp; the open frontier.
             </h1>
             <p class="hero-subtitle">
-              Open Range (OPR) is a GPU/CPU-Friendly Layer-1 Blockchain Designed To Keep Mining Accessible,
-              Push Real Scarcity, and Reward The People Who Actually Secure The Network.
+              Open Range (OPR) is a GPU/CPU-friendly Layer-1 blockchain designed to keep mining accessible,
+              push real scarcity, and reward the people who actually secure the network.
             </p>
             <div class="hero-cta-row">
               <a class="btn-primary" href="#tokenomics">
-                View Tokenomics
+                View tokenomics
                 <span>↗</span>
               </a>
               <a class="btn-secondary" href="#mining">
-                How To Mine OPR
+                How to mine OPR
               </a>
             </div>
             <p class="hero-note">
-              50M Max Supply • 40 OPR Block Reward • Fee Split: 50% Miners, 25% Burn, 25% Stakers.
+              50M max supply • 40 OPR block reward • fee split: 50% miners, 25% burn, 25% stakers.
             </p>
 
             <div class="hero-stats">
               <div class="stat-card">
                 <div class="stat-label">Max Supply</div>
                 <div class="stat-value">50,000,000 OPR</div>
-                <div class="stat-foot">Hard-Capped, No Treasury Drain.</div>
+                <div class="stat-foot">Hard-capped, no treasury drain.</div>
               </div>
               <div class="stat-card">
                 <div class="stat-label">Block Reward</div>
                 <div class="stat-value">40 OPR</div>
-                <div class="stat-foot">~180s Target Block Time.</div>
+                <div class="stat-foot">~180s target block time.</div>
               </div>
               <div class="stat-card">
                 <div class="stat-label">Fee Split</div>
                 <div class="stat-value">50 / 25 / 25</div>
                 <div class="stat-foot">Miners • Burn • Stakers.</div>
               </div>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="hero-tagline">TROUBLESHOOTER • FUTURISTIC • OPEN RANGE</div>
-            <div class="hero-image">
-              <!-- Replace this background image URL with your German Shepherd + western art later -->
-              <div class="hero-image-overlay"></div>
-              <div class="hero-image-caption">
-                A German Shepherd guarding the Open Range – our project mascot and symbol of loyalty & security.
-              </div>
-              <div class="hero-pill">
-                <span class="dot"></span>
-                <span>Mining Live on Testnet Soon</span>
-              </div>
-            </div>
-            <div class="hero-footnote">
-              Built For Small Miners First – Optimized For Everyday GPUs and CPUs, Not Warehouse-Scale ASIC Farms.
             </div>
           </div>
         </div>
@@ -826,31 +730,31 @@
           <span class="section-label-dot"></span>
           <span>About Open Range</span>
         </div>
-        <h2 class="section-title">Fair Proof-of-Work With Real Scarcity Baked in.</h2>
+        <h2 class="section-title">Fair proof-of-work with real scarcity baked in.</h2>
         <p class="section-subtitle">
-          Open Range is inspired by Bitcoin’s Simplicity But Modernized For Today’s Miners and DeFi Users:
-          Capped Supply, Predictable Emission, and a Fee Model That Doesn’t Forget The Small Players.
+          Open Range is inspired by Bitcoin’s simplicity but modernized for today’s miners and DeFi users:
+          capped supply, predictable emission, and a fee model that doesn’t forget the small players.
         </p>
 
         <div class="grid-two">
           <div>
             <ul class="list-check">
-              <li><span class="highlight">50M Hard Cap</span> – A Tight Supply Designed For Real Scarcity.</li>
-              <li><span class="highlight">Accessible Mining</span> – Tuned For GPU/CPU Rigs Instead of Industrial ASICs.</li>
-              <li><span class="highlight">Aligned Economics</span> – Fees Support Miners, Stakers, and a Permanent Burn.</li>
-              <li><span class="highlight">No Central Treasury Drain</span> – We Removed The Treasury Cut From Fees.</li>
+              <li><span class="highlight">50M hard cap</span> – a tight supply designed for real scarcity.</li>
+              <li><span class="highlight">Accessible mining</span> – tuned for GPU/CPU rigs instead of industrial ASICs.</li>
+              <li><span class="highlight">Aligned economics</span> – fees support miners, stakers, and a permanent burn.</li>
+              <li><span class="highlight">No central treasury drain</span> – we removed the treasury cut from fees.</li>
             </ul>
           </div>
           <div class="about-card">
             <strong>Why “Open Range”?</strong>
             <p>
-              The Open Range is Where Anyone Can Ride – No Gates, No VIP Zones. That’s The Spirit of This Chain:
-              No presale, No insiders, and an Emission Schedule That Lets New Miners Still Compete.
+              The open range is where anyone can ride – no gates, no VIP zones. That’s the spirit of this chain:
+              no presale, no insiders, and an emission schedule that lets new miners still compete.
             </p>
             <div class="about-pill-row">
-              <span class="pill">No Presale</span>
-              <span class="pill">No VC Allocation</span>
-              <span class="pill">No Hidden Dev Tax</span>
+              <span class="pill">No presale</span>
+              <span class="pill">No VC allocation</span>
+              <span class="pill">No hidden dev tax</span>
             </div>
           </div>
         </div>
@@ -862,10 +766,10 @@
           <span class="section-label-dot"></span>
           <span>Tokenomics</span>
         </div>
-        <h2 class="section-title">Simple Economics. Transparent Emission. Hard Cap Supply.</h2>
+        <h2 class="section-title">Simple economics. Transparent emission. Hard cap supply.</h2>
         <p class="section-subtitle">
-          OPR Keeps The Math Simple: a 50 million Supply Cap, 40 OPR Starting Block Reward,
-          and a Halving-Style Schedule to Front-Load Distribution While Still Protecting Long-Term Scarcity.
+          OPR keeps the math simple: a 50 million supply cap, 40 OPR starting block reward,
+          and a halving-style schedule to front-load distribution while still protecting long-term scarcity.
         </p>
 
         <div class="tokenomics-layout">
@@ -874,7 +778,7 @@
               <div class="token-label">Max Supply</div>
               <div class="token-main">50,000,000 OPR</div>
               <div class="token-detail">
-                Fixed Forever – No Hidden Inflation, No “Governance” Mint Button.
+                Fixed forever – no hidden inflation, no “governance” mint button.
               </div>
             </div>
 
@@ -882,7 +786,7 @@
               <div class="token-label">Base Block Reward</div>
               <div class="token-main">40 OPR / block</div>
               <div class="token-detail">
-                Target ~180 Second Blocks. Block Reward Reduces Over Eras in a Halving-Style Schedule.
+                Target ~180 second blocks. Block reward reduces over eras in a halving-style schedule.
               </div>
             </div>
 
@@ -895,31 +799,31 @@
                 <div class="fee-chip">25% → Stakers</div>
               </div>
               <div class="token-detail" style="margin-top:6px;">
-                Every On-Chain Transaction Directly Reinforces Security <em>and</em> Long-Term Scarcity.
+                Every on-chain transaction directly reinforces security <em>and</em> long-term scarcity.
               </div>
             </div>
 
             <div class="token-card">
               <div class="token-label">Treasury</div>
-              <div class="token-main">0% of Fees</div>
+              <div class="token-main">0% of fees</div>
               <div class="token-detail">
-                We Removed The Treasury Cut. No Endless Dev Wallet – Value Flows To Miners, Stakers, and The Burn.
+                We removed the treasury cut. No endless dev wallet – value flows to miners, stakers, and the burn.
               </div>
             </div>
           </div>
 
           <div class="chart-card">
-            <strong>Emission Over Time</strong>
+            <strong>Emission over time</strong>
             <p>
-              Open Range Targets a Bitcoin-Style Emission Curve: A Heavier Distribution in The Early Years To
-              Reward Early Miners, Then Tapering Off as The Network Matures.
+              Open Range targets a Bitcoin-style emission curve: a heavier distribution in the early years to
+              reward early miners, then tapering off as the network matures.
             </p>
             <div class="chart-placeholder">
-              Future Spot For a Simple Emission Chart / Halving Diagram.
+              Future spot for a simple emission chart / halving diagram.
             </div>
             <p class="token-note">
-              As The Base Block Reward Decays, Fee Volume and The Burn Mechanism Become Increasingly Important
-              in Supporting Miners and Tightening Supply.
+              As the base block reward decays, fee volume and the burn mechanism become increasingly important
+              in supporting miners and tightening supply.
             </p>
           </div>
         </div>
@@ -931,44 +835,44 @@
           <span class="section-label-dot"></span>
           <span>Mining Open Range</span>
         </div>
-        <h2 class="section-title">Built So Everyday Rigs Can Compete.</h2>
+        <h2 class="section-title">Built so everyday rigs can compete.</h2>
         <p class="section-subtitle">
-          We’re Designing Open Range To Stay GPU/CPU-Friendly and Make it Tough For Huge ASIC Farms To Dominate.
-          That Means Predictable Block Times, Fair Difficulty Adjustments, and No Weird “insider” Mining Advantage.
+          We’re designing Open Range to stay GPU/CPU-friendly and make it tough for huge ASIC farms to dominate.
+          That means predictable block times, fair difficulty adjustments, and no weird “insider” mining advantage.
         </p>
 
         <div class="mining-layout">
           <div>
             <p style="font-size:13px;margin-bottom:10px;">
-              The Goal is Simple: If You Have a Halfway Decent Gaming PC or Second-Hand Mining Rig, You Can
-              Participate Solo Or In a Mining Pool. No Need For a Miillion-Dollar Data Center.
+              The goal is simple: if you have a halfway decent gaming PC or second-hand mining rig, you can
+              participate. No need for a million-dollar data center.
             </p>
             <ol class="steps">
-              <li>Download The Official Open Range Node + Miner (links will go here).</li>
-              <li>Point Your Miner To The Official Pool or Run a Solo Node.</li>
-              <li>Configure Intensity and Power To Match Your GPU/CPU.</li>
-              <li>Start Hashing and Earning OPR Directly From Block Rewards and Fees.</li>
+              <li>Download the official Open Range node + miner (links will go here).</li>
+              <li>Point your miner to the official pool or run a solo node.</li>
+              <li>Configure intensity and power to match your GPU/CPU.</li>
+              <li>Start hashing and earning OPR directly from block rewards and fees.</li>
             </ol>
             <div class="badge-row">
-              <span class="badge">GPU / CPU Powered</span>
-              <span class="badge">~180 Sec Blocks</span>
-              <span class="badge">LWMA-Style Difficulty (Planned)</span>
-              <span class="badge">Fair No Tricks Launch </span>
+              <span class="badge">GPU / CPU friendly</span>
+              <span class="badge">~180 sec blocks</span>
+              <span class="badge">LWMA-style difficulty (planned)</span>
+              <span class="badge">Fair launch ethos</span>
             </div>
           </div>
           <div class="mining-card">
-            <strong>Testnet First, Mainnet When it’s Ready.</strong>
+            <strong>Testnet first, mainnet when it’s ready.</strong>
             <p>
-              Before Mainnet, We’ll Run an Open Testnet So Miners Can Dial in Their Hashrate, Try Different Rigs,
-              and Help Us Tune Difficulty and Parameters For Real-World Conditions.
+              Before mainnet, we’ll run an open testnet so miners can dial in their hashrate, try different rigs,
+              and help us tune difficulty and parameters for real-world conditions.
             </p>
             <p style="margin-top:8px;">
-              We’re Focused On:
+              We’re focused on:
             </p>
             <ul class="list-check" style="margin-top:6px;font-size:12px;">
-              <li>Empowering Users With Real Ownership and Decentralized Control..</li>
-              <li>Avoiding Sudden Difficulty Spikes That Kill Smaller Rigs.</li>
-              <li>Ensuring Fees + Burn Give Miners a Path Past Pure Block Rewards.</li>
+              <li>Keeping home miners competitive as long as possible.</li>
+              <li>Avoiding sudden difficulty spikes that kill smaller rigs.</li>
+              <li>Ensuring fees + burn give miners a path past pure block rewards.</li>
             </ul>
           </div>
         </div>
@@ -980,9 +884,9 @@
           <span class="section-label-dot"></span>
           <span>Roadmap</span>
         </div>
-        <h2 class="section-title">From Keyboard To Chain To Ecosystem</h2>
+        <h2 class="section-title">From code to chain to ecosystem.</h2>
         <p class="section-subtitle">
-         No Overpromises — Only Delivery. The Chain Goes Live First, and We Evolve it Side-By-Side With The Users Who Own The Power.
+          We’re not promising the moon – we’re shipping a real chain, then iterating with the community.
         </p>
 
         <div class="roadmap">
@@ -990,14 +894,14 @@
             <div>
               <div class="milestone-label">Phase 0</div>
               <div class="milestone-badge ready">
-                <span>●</span> In Progress
+                <span>●</span> In progress
               </div>
             </div>
             <div>
-              <div class="milestone-title">Core Chain Design & Parameters</div>
+              <div class="milestone-title">Core chain design &amp; parameters</div>
               <div class="milestone-body">
-                Finalize Block Time, Reward Schedule, Fee Split, and Mining Algorithm details. Internal test nodes
-                and Local Devnet Runs.
+                Finalize block time, reward schedule, fee split, and mining algorithm details. Internal test nodes
+                and local devnet runs.
               </div>
             </div>
           </div>
@@ -1010,10 +914,10 @@
               </div>
             </div>
             <div>
-              <div class="milestone-title">Public Testnet & Miner Onboarding</div>
+              <div class="milestone-title">Public testnet &amp; miner onboarding</div>
               <div class="milestone-body">
-                Launch Public Testnet, Publish Guides, and Invite GPU/CPU Miners To Help Stress-Test The Network
-                and Tune Difficulty.
+                Launch public testnet, publish guides, and invite GPU/CPU miners to help stress-test the network
+                and tune difficulty.
               </div>
             </div>
           </div>
@@ -1026,10 +930,10 @@
               </div>
             </div>
             <div>
-              <div class="milestone-title">Mainnet Launch (fair start)</div>
+              <div class="milestone-title">Mainnet launch (fair start)</div>
               <div class="milestone-body">
-                Open Range Mainnet Launch With No Premine, No Presale, and a Clean Starting Snapshot – Everyone
-                Begins On The Same Line.
+                Open Range mainnet launch with no premine, no presale, and a clean starting snapshot – everyone
+                begins on the same line.
               </div>
             </div>
           </div>
@@ -1042,10 +946,10 @@
               </div>
             </div>
             <div>
-              <div class="milestone-title">DeFi & Ecosystem Expansion</div>
+              <div class="milestone-title">DeFi &amp; ecosystem expansion</div>
               <div class="milestone-body">
-                Explore L2 Tokens, DEX Integrations, and Ways To Plug Open Range Into The Broader Crypto Economy,
-                While Keeping Mining at The Core of Security.
+                Explore L2 tokens, DEX integrations, and ways to plug Open Range into the broader crypto economy,
+                while keeping mining at the core of security.
               </div>
             </div>
           </div>
@@ -1058,20 +962,20 @@
           <span class="section-label-dot"></span>
           <span>Community</span>
         </div>
-        <h2 class="section-title">Ride With Us On The Open Range.</h2>
+        <h2 class="section-title">Ride with us on the Open Range.</h2>
         <p class="section-subtitle">
-          Open Range is a Grass-Roots, Builder-First Project. No Marketing, No Corporate Suits – Just People
-          Who Love Mining, Sound Tokenomics, and Open Infrastructure..
+          Open Range is a grass-roots, builder-first project. No marketing agencies, no corporate suits – just people
+          who love mining, sound tokenomics, and open infrastructure.
         </p>
 
         <div class="community-grid">
           <div>
             <div class="social-row">
-              <a class="social-link" href="https://x.com/OpenRangeGuide" target="_blank" rel="noreferrer">
+              <a class="social-link" href="#" target="_blank" rel="noreferrer">
                 <span class="icon"></span>
                 X (Twitter)
               </a>
-              <a class="social-link" href="https://www.reddit.com/r/TheRealOpenRange/" target="_blank" rel="noreferrer">
+              <a class="social-link" href="#" target="_blank" rel="noreferrer">
                 <span class="icon"></span>
                 Reddit
               </a>
@@ -1085,14 +989,14 @@
               </a>
             </div>
             <p class="disclaimer">
-              Links Are Placeholders For Now – We’ll Plug in The Real Socials and Repo URLs As We go Live.
+              Links are placeholders for now – we’ll plug in the real socials and repo URLs as we go live.
             </p>
           </div>
           <div class="cta-card">
-            <strong>Want To Mine, Test, or Help Shape Open Range?</strong>
+            <strong>Want to mine, test, or help shape Open Range?</strong>
             <p style="margin-top:6px;">
-              We’ll Be Opening Up Early Testing and Miner Guides as The Chain Solidifies. If You’re a GPU/CPU Miner,
-              Dev, Or Someone Who Loves Fair Launch Projects, You’re Exactly Who We’re Building This For.
+              We’ll be opening up early testing and miner guides as the chain solidifies. If you’re a GPU/CPU miner,
+              dev, or just someone who loves fair launch projects, you’re exactly who we’re building this for.
             </p>
           </div>
         </div>
@@ -1100,15 +1004,14 @@
     </main>
 
     <footer>
-      <span>© <span id="year"></span> Open Range • A Community-Driven Proof-of-Work Project.</span>
-      <a href="#home">Back To Top ↑</a>
+      <span>© <span id="year"></span> Open Range • A community-driven Proof-of-Work project.</span>
+      <a href="#home">Back to top ↑</a>
     </footer>
   </div>
 
   <script>
-    // Simple Dynamic Year in Footer
+    // Simple dynamic year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
